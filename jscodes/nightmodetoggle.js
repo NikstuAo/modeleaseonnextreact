@@ -10,8 +10,6 @@ function nightModeToggle() {
         document.body.style.background = nightmode ? 'white' : 'black';
         document.body.style.color = nightmode ? 'black' : 'white';
         document.getElementById('moonicon').style.color = nightmode ? 'deepskyblue' : 'darkblue';
-        document.getElementById('usercircle').style.backgroundColor = nightmode ? 'white' : 'black';
-        document.getElementById('usericon').style.fill = nightmode ? 'black' : 'white';
         document.getElementById('headmenu').style.backgroundColor = nightmode ? 'black' : 'white';
         document.getElementById('headmenu').style.color = nightmode ? 'white' : 'black';
         try {
@@ -22,6 +20,7 @@ function nightModeToggle() {
             document.getElementById('aboutwrapper').style.backgroundColor = nightmode ? 'black' : 'white';
             document.getElementById('aboutwrapper').style.color = nightmode ? 'white' : 'black';
         } catch (error) {
+
         }
 
         try {

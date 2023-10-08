@@ -36,7 +36,6 @@ export default function Home() {
         <div className={`row`}>
           <Logo onClick={handleLogoClick} />
         </div>
-        
       </div>
     </div>
   )
