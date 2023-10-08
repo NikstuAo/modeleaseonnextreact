@@ -3,8 +3,10 @@ import { useState } from "react";
 function nightModeToggle() {
     const [nightmode, setNightMode] = useState(false);
     const [modeChanges, setModeChanges] = useState(0);
+    const [jojohabilitado, setJojo] = useState(true);
 
     function applyNightMode() {
+        {/* setJojo(false) (Desativar Efeitos de Jojo)*/}
         setModeChanges(modeChanges + 1)
         setNightMode(!nightmode)
         document.body.style.background = nightmode ? 'white' : 'black';
@@ -38,7 +40,7 @@ function nightModeToggle() {
 
         }
 
-        if (modeChanges >= 10) {
+        if (modeChanges >= 10 && jojohabilitado == true) {
             document.body.style.backgroundImage = "url('./Kono_Dio_Da.jpg')";
             if (modeChanges === 10) {
                 var jojoop = new Audio('./JOJO SONO CHINO SADAME.mp3');

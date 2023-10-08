@@ -14,6 +14,7 @@ import Logout from '@mui/icons-material/Logout';
 
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [avatarImgSrc, setavatarImgSrc] = React.useState('./Sonic Velocidade Do Som Sorrindo.png');
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -22,7 +23,20 @@ export default function AccountMenu() {
     setAnchorEl(null);
   };
   const openProfile = () => {
+    setAnchorEl(null);
     window.location.href = './Profile'
+  };
+  const openMyAcc = () => {
+    setAnchorEl(null);
+    window.location.href = './MyAccount'
+  };
+  const openCfg = () => {
+    setAnchorEl(null);
+    window.location.href = './Config'
+  };
+  const logOut = () => {
+    setAnchorEl(null);
+    setavatarImgSrc('./')
   };
 
   return (
@@ -35,7 +49,7 @@ export default function AccountMenu() {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar></Avatar>
+            <Avatar src={`${avatarImgSrc}`}></Avatar>
           </IconButton>
         </Tooltip>
       </Box>
@@ -75,23 +89,23 @@ export default function AccountMenu() {
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         <MenuItem onClick={openProfile}>
-          <Avatar /> Profile
+          <Avatar src={`${avatarImgSrc}`} /> Perfil
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Avatar /> My account
+        <MenuItem onClick={openMyAcc}>
+          <Avatar src={`${avatarImgSrc}`} /> Minha Conta
         </MenuItem>
         <Divider />
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={openCfg}>
           <ListItemIcon>
             <Settings fontSize="small" />
           </ListItemIcon>
-          Settings
+          Configurações
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={logOut}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
-          Logout
+          Deslogar
         </MenuItem>
       </Menu>
     </React.Fragment>
