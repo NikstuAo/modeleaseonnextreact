@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import { useEffect } from "react";
+import React from 'react';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

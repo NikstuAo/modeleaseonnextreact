@@ -13,11 +13,18 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 
 export default function AccountMenu() {
+  React.useEffect(() => {
+    var item_value_recuperado = sessionStorage.getItem("item_key");
+    setavatarImgSrc(item_value_recuperado)
+    console.log(item_value_recuperado)
+  }, []);
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [avatarImgSrc, setavatarImgSrc] = React.useState('./Sonic Velocidade Do Som Sorrindo.png');
+  const [avatarImgSrc, setavatarImgSrc] = React.useState();
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+    var item_value_recuperado = sessionStorage.getItem("item_key");
+    setavatarImgSrc(item_value_recuperado);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -36,7 +43,8 @@ export default function AccountMenu() {
   };
   const logOut = () => {
     setAnchorEl(null);
-    setavatarImgSrc('./')
+    sessionStorage.setItem("item_key", './');
+    setavatarImgSrc('./');
   };
 
   return (

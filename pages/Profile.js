@@ -1,7 +1,8 @@
 import Head from '../components/Head.js'
 import styles from '../styles/Home.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Avatar } from '@mui/material'
+import AccountMenu from '../components/AccMenu.js'
 
 export default function Profile() {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -15,6 +16,9 @@ export default function Profile() {
 
             const imageUrl = URL.createObjectURL(file);
             setAvatarUrl(imageUrl);
+
+            var item_value = imageUrl;
+            sessionStorage.setItem("item_key", item_value);
         }
     };
 

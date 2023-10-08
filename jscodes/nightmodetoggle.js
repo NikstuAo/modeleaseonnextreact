@@ -17,7 +17,9 @@ function nightModeToggle() {
         try {
             document.getElementById('modeleaselogotext').style.webkitTextStrokeColor = nightmode ? 'black' : 'white';
         } catch (error) {
+            
         }
+        
         try {
             document.getElementById('aboutwrapper').style.backgroundColor = nightmode ? 'black' : 'white';
             document.getElementById('aboutwrapper').style.color = nightmode ? 'white' : 'black';

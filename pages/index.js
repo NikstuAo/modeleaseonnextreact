@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from '../components/Head.js';
 import Logo from '../components/Logo.js';
 import ModelEaseText from '../components/ModelEaseText.js';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+
   const [logoClicks, setLogoClicks] = useState(0);
   const [lock, setLock] = useState(false);
   const unlock = () => {
