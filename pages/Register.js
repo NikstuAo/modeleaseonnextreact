@@ -2,7 +2,7 @@ import Head from '../components/Head.js'
 import styles from '../styles/Home.module.css'
 import { createContext, useEffect, useState } from 'react'
 
-export default function Profile() {
+export default function Register() {
     const [selectedFile, setSelectedFile] = useState(null);
     const [avatarUrl, setAvatarUrl] = useState(null);
 
@@ -12,6 +12,7 @@ export default function Profile() {
             setSelectedFile(file);
             const imageUrl = URL.createObjectURL(file);
             sessionStorage.setItem("avatar_url", imageUrl);
+            sessionStorage.setItem(imageUrl, "Rodolfinho");
         }
     };
 

@@ -5,10 +5,10 @@ import styles from '../styles/Home.module.css'
 export default function About() {
   return (
     <div>
-      <div className={`container-fluid`}>
+      <div className={`container-fluid`} id='container-fluid'>
         <Head />
         <div className={`row`} style={{ marginTop: '10px' }}>
-          <div className={`col ${styles.circular_border}`} style={{ backgroundColor : 'black', color : 'white', marginLeft: '50px', marginRight: '50px'}} id="aboutwrapper">
+          <div className={`col ${styles.circular_border}`} style={{ backgroundColor : '#B6E1E7', color : 'black', marginLeft: '50px', marginRight: '50px'}} id="aboutwrapper">
             <h1 className={`text-center fs-1 ${styles.notransition}`}  style={{ marginTop: '10px' }}>Quem Somos?</h1><br />
             <p className={`text-center fs-3 ${styles.notransition}`}  style={{ marginBottom: '20px' }}>Model ease é uma startup criada em 2023 pelos desenvolvedores Gustavo Schimidt Weber e Victor Renner. A startup foi criada com base nas ideias maker após o fundador Victor Renner se deparar com a falta de acesso a tecnologias de Impressão 3D e falta de acesso a modelos 3D de qualidade. <br /><br />
               Pensando nisso Victor cria a startup ModelEase e convida Gustavo Schimidt Weber para ser co-fundador. Em outubro de 2023 ModelEase ganha sua primeira versão como um site piloto para fornecimento de serviços de Impressão, Design, Modelagem e Compra de Modelos 3D. <br /><br />

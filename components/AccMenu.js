@@ -14,7 +14,7 @@ import Logout from '@mui/icons-material/Logout';
 
 export default function AccountMenu() {
   React.useEffect(() => {
-    var item_value_recuperado = sessionStorage.getItem("item_key");
+    var item_value_recuperado = sessionStorage.getItem("avatar_url");
     setavatarImgSrc(item_value_recuperado)
     console.log(item_value_recuperado)
   }, []);
@@ -23,8 +23,8 @@ export default function AccountMenu() {
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
-    var item_value_recuperado = sessionStorage.getItem("item_key");
-    setavatarImgSrc(item_value_recuperado);
+    var avatarUrl = sessionStorage.getItem("avatar_url");
+    setavatarImgSrc(avatarUrl);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -43,8 +43,8 @@ export default function AccountMenu() {
   };
   const logOut = () => {
     setAnchorEl(null);
-    sessionStorage.setItem("item_key", './');
-    setavatarImgSrc('./');
+    sessionStorage.clear();
+    window.location.href = './'
   };
 
   return (
